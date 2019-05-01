@@ -63,9 +63,9 @@ class ViewController: UIViewController {
             counter = 0.0
             timeLabel.text = "0.0"
 
-        } else {
-
+        } else if isStarted == false {
             timer = Timer.scheduledTimer(timeInterval: 0.1, target: self, selector: #selector(updateTimeLabel), userInfo: nil, repeats: true)
+            isStarted = true
             
         }
             
